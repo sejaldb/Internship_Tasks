@@ -1,0 +1,9 @@
+#https://www.hackerrank.com/challenges/reduced-string/problem
+s = input()
+stack = []
+for char in s:
+    if stack and stack[-1] == char:
+        stack.pop()
+    else:
+        stack.append(char)
+print("".join(stack) if stack else "Empty String")
